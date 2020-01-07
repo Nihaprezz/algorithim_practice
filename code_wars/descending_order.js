@@ -20,3 +20,9 @@ function descendingOrder(n){
      return parseInt(descendingNum)
 }
 
+
+//More advance solution : 
+function descendingOrder(n){
+    return parseInt(String(n).split('').sort().reverse().join(''))
+}
+
