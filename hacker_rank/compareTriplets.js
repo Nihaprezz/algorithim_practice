@@ -4,6 +4,10 @@
 // If a[i] = b[i], then neither person receives a point
 //Complete the function compareTriplets. It must return an array of two integers, the first being Alice's score and the second being Bob's.
 
+//Sample Input : 
+//alice = [12, 28, 30]
+//bob = [99, 16, 8]
+
 function compareTriplets(a, b) {
     let scoreBoard = [0,0] //array will be used to store the scores.
 
