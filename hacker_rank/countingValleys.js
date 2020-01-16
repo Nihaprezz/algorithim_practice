@@ -7,16 +7,23 @@
 
 function countingValleys(n, s) {
     let valleys = 0     //variable will keep track on the valleys. Will go up whenever the path hits 0 on the 'sea lvl'
-    let endPath = 0     //will map out the path by adding 1 or subtracting 1 to it.
+    let path = 0     //will map out the path by adding 1 or subtracting 1 to it.
 
     s.split('').forEach(ltr => {    //changing string to array using split and using for each to iterate through.
       if(ltr === 'U'){              //if ltr === U then we will move up on the end path
-        endPath++;
-        endPath === 0 && valleys++      //checks to see when we move up if we have hit the 'sea level' at 0 and if so, adds 1 to the valley.
+        path++;
+        path === 0 && valleys++      //checks to see when we move up if we have hit the 'sea level' at 0 and if so, adds 1 to
       } else if(ltr === "D") {
-        endPath--;              //subtracts from the path if the ltr is D
+        path--;              //will subtract 1 from the path if the ltr matches D
       }
     });
   
-    return valleys;     //returning the valleys
+    return valleys;     //returns the amount of valleys counted.
 }
+
+
+// Test Cases 
+// 1. s = "UDDDUDUU"
+// 2. s = "DDUUDDUDUUUD"
+
+countingValleys(8, "UDDDUDUU");
