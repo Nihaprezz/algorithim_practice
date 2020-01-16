@@ -7,6 +7,19 @@
 // n: the number of socks in the pile
 // ar: the colors of each sock
 
+let size = 9 
+let array = [10, 20, 20, 10, 10, 30, 50, 10, 20]
+
 function sockMerchant(n, ar) {
-    return ar
+    let pairs = {}
+    ar.forEach(num => {
+      if (pairs[num]){
+        pairs[num] += 1
+      } else {
+        pairs[num] = 1
+      }
+    })
+  
+    console.log(pairs)
 }
+
