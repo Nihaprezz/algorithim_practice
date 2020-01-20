@@ -8,9 +8,20 @@ function staircase(n) {
     let size = n, counter = 0, space = " ", hashtag = "#", 
     numOfHashtags = 1;
 
-    while( counter < size ){
-        console.log(space.repeat(size-1) + hashtag.repeat(numOfHashtags))
+    while( counter < size ){    //while the counter is less then the size the while loop will run.
+        //using .repeat to repeat the space variable declared equal to the size -1.
+        //using .repeat to for the number of '#' used. Variable for hashtags will start at 1 and increment through while loop.
+        console.log(space.repeat(size-1) + hashtag.repeat(numOfHashtags))   
         size--;
         numOfHashtags++;
     }
 }
+
+//Sample input : 6
+//Sample Output:
+//      #
+//     ##
+//    ###
+//   ####
+//  #####
+// ######
