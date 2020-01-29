@@ -22,3 +22,11 @@ var containsDuplicate = function(nums) {
   
     return false            //if the for loop goes through sucessfully without finding any duplicates then it will return false. No duplicated values.
 };
+
+//Advanced Solution to run faster
+
+var containsDuplicate = function(nums) {
+    let set = new Set(nums);        //Set creates an object that stores unique values. So for example 1 it will return {1, 2, 3}
+    return (set.size < nums.length);    //If set size which in this case is 3 is greater then nums which in this case is 4 then return true.
+                                        //So if set size which is only unique values is less then nums array length then that means there is duplicates.
+};
