@@ -14,3 +14,14 @@ function findShort(s){
   
     return shortest 
   }
+
+
+// ADVANCED SOLUTION 
+
+function findShort(s){
+    return Math.min(...s.split(" ").map (s => s.length));
+}
+
+//Math.min returns lowest valued number passed in 
+//.split("") creates an array of the words
+//.map goes through the array and returns back an array of integers which are the lengths of the words
