@@ -28,3 +28,12 @@ function printerError(s) {
 
     return `${counter}/${s.length}`
 }
+
+//advanced solution 
+function printerError(s) {
+    return s.match(/[^a-m]/g).length + "/" + s.length;
+}
+
+//.match takes in a regex expression and returns an array of the matching letters. 
+//but in this case bc [^] was used it negates it and returns the oppposite. So an array of letters that do not match the regex.
+//you get the length of the negative matches and built out the string.
