@@ -3,18 +3,20 @@
 // There will always be only one integer that appears an odd number of times.
 
 function findOdd(A) {
-    A = A.sort();
-    let stack = [];
+    A = A.sort();   //sorting the numbers will make it easier to use a stack
+    let stack = []; //we will be adding and removing numbers from this array.
   
     for(let i = 0; i < A.length; i++){
-      if(stack.includes(A[i])){
-        stack.pop()
+      if(stack.includes(A[i])){ 
+        stack.pop()     //if number is in the stack we will pop it off and it should be the last one 
       } else {
-        stack.push(A[i])
+        stack.push(A[i])    //if number is not in the stack we will push it to the end.
       }
     }
+
+    //since we are using a stack it is last pushed first to go. 
   
-    return stack[0]
+    return stack[0] //we will be left with one digit which was not popped since there was only one
   }
 
   //Example 1:
